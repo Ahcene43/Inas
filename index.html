@@ -160,16 +160,31 @@
       min-height: 450px;
     }
 
-    .slide-image {
-      width: 100%;
-      max-width: 350px;
-      height: 250px;
-      object-fit: contain;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      background: #f8f9fa;
-    }
+    /* تحسينات إضافية للصور في السلايدر */
+.slide-image {
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  object-fit: contain !important;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  background: #f8f9fa;
+  display: block;
+  margin: 0 auto;
+}
+
+/* تأكد من أن الحاوية مناسبة */
+.slide {
+  flex: 0 0 100%;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+}
 
     .slide:hover .slide-image {
       transform: scale(1.02);
@@ -1408,32 +1423,37 @@
     }
 
     function initSlider() {
-      const slidesContainer = document.getElementById('slidesContainer');
-      const sliderNav = document.getElementById('sliderNav');
-      
-      slidesContainer.innerHTML = '';
-      sliderNav.innerHTML = '';
-      
-      Object.keys(modalData).forEach((key, index) => {
-        const product = modalData[key];
-        const slide = document.createElement('div');
-        slide.className = `slide ${index === 0 ? 'active' : ''}`;
-        slide.innerHTML = `
-          <img src="${product.image}" alt="${product.name}" class="slide-image">
-          <div class="slide-content">
-            <h3 class="slide-title">${product.name}</h3>
-            <p class="slide-description">${product.description}</p>
-            <div class="modal-price"><i class="fas fa-tag"></i> السعر: ${product.price} دج</div>
-          </div>
-        `;
-        slidesContainer.appendChild(slide);
-        
-        const dot = document.createElement('div');
-        dot.className = `slider-dot ${index === 0 ? 'active' : ''}`;
-        dot.setAttribute('data-slide', index);
-        sliderNav.appendChild(dot);
-      });
-      
+  const slidesContainer = document.getElementById('slidesContainer');
+  const sliderNav = document.getElementById('sliderNav');
+  
+  slidesContainer.innerHTML = '';
+  sliderNav.innerHTML = '';
+  
+  Object.keys(modalData).forEach((key, index) => {
+    const product = modalData[key];
+    const slide = document.createElement('div');
+    slide.className = `slide ${index === 0 ? 'active' : ''}`;
+    slide.innerHTML = `
+      <div class="slide-image-container">
+        <img src="${product.image}" alt="${product.name}" class="slide-image" 
+             onerror="this.src='https://via.placeholder.com/350x250/FF9EBC/FFFFFF?text=صورة+غير+متوفرة'">
+      </div>
+      <div class="slide-content">
+        <h3 class="slide-title">${product.name}</h3>
+        <p class="slide-description">${product.description}</p>
+        <div class="modal-price"><i class="fas fa-tag"></i> السعر: ${product.price} دج</div>
+      </div>
+    `;
+    slidesContainer.appendChild(slide);
+    
+    const dot = document.createElement('div');
+    dot.className = `slider-dot ${index === 0 ? 'active' : ''}`;
+    dot.setAttribute('data-slide', index);
+    sliderNav.appendChild(dot);
+  });
+  
+  // باقي الكود كما هو...
+}
       const dots = document.querySelectorAll('.slider-dot');
       const prevBtn = document.getElementById('prevSlide');
       const nextBtn = document.getElementById('nextSlide');
