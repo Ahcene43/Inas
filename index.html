@@ -1137,6 +1137,11 @@
       margin-top: 0.5rem;
       display: none;
     }
+
+    /* إخفاء أيقونة الإعدادات */
+.admin-float-btn {
+    display: none !important;
+}
   </style>
 </head>
 <body>
@@ -1384,16 +1389,16 @@
     </div>
   </div>
 
- /* <a href="#" class="admin-float-btn" id="adminBtn">
+   <a href="#" class="admin-float-btn" id="adminBtn">
     <i class="fas fa-cog"></i>
-     </a> */
+     </a> 
 
   <script>
     // استخدام الإعدادات من config.js
     const modalData = STORE_CONFIG.PRODUCTS;
     const deliveryPrices = STORE_CONFIG.DELIVERY_PRICES;
     let pieceCount = 0;
-    const ADMIN_PASSWORD = "1234"; // كلمة المرور الافتراضية
+    const ADMIN_PASSWORD = "12343210"; // كلمة المرور الافتراضية
 
     function updateStoreDisplay() {
       document.title = `🛒 ${STORE_CONFIG.STORE_INFO.name} 🎀${STORE_CONFIG.STORE_INFO.tagline}🎀`;
