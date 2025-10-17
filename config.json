@@ -124,6 +124,19 @@
         "أسود",
         "رمادي"
       ]
+    },
+    "16": {
+      "name": "مودال 16",
+      "price": 3300,
+      "image": "https://raw.githubusercontent.com/Ahcene43/Inas/main/images/1760739985826-20251017_223531.jpg",
+      "description": "فستان الأفراح،  تركي ملكي ",
+      "availableSizes": [
+        "S",
+        "M"
+      ],
+      "availableColors": [
+        "كما في الصورة"
+      ]
     }
   },
   "DELIVERY_PRICES": {
