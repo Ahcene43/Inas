@@ -1,91 +1,97 @@
  // config.js - ملف الإعدادات المشترك
 let STORE_CONFIG = {
-  PRODUCTS: {
-    1: { 
-      name: "مودال 1", 
-      price: 3300, 
-      image: "images/modal1.jpg", 
-      description: "تصميم مريح وعصري مع تفاصيل راقية تناسب جميع المناسبات",
-      availableSizes: ["S", "M", "L"],
-      availableColors: ["كما في الصورة", "أبيض", "أسود", "أزرق"]
+  
+  "PRODUCTS": {
+    "1": {
+      "name": "مودال 1",
+      "price": 3300,
+      "image": "https://i.ibb.co/wFhBNhmf/modal6-jpg.webp",
+      "description": "تصميم مريح وعصري مع تفاصيل راقية تناسب جميع المناسبات",
+      "availableColors": [
+        "كما في الصورة"
+      ],
+      "availableSizes": [
+        "M",
+        "L"
+      ]
     },
-    2: { 
-      name: "مودال 2", 
-      price: 3300, 
-      image: "images/modal2.jpg", 
-      description: "تصميم عملي وأنيق مع خامات عالية الجودة تدوم طويلا",
-      availableSizes: ["S", "M", "L", "XL"],
-      availableColors: ["كما في الصورة", "أحمر", "أخضر", "زهري"]
+    "2": {
+      "name": "مودال 2",
+      "price": 3300,
+      "image": "https://i.ibb.co/Zz2vDjzx/modal7-jpg.webp",
+      "description": "تصميم عملي وأنيق مع خامات عالية الجودة تدوم طويلا"
     },
-    3: { 
-      name: "مودال 3", 
-      price: 3300, 
-      image: "images/modal3.jpg", 
-      description: "مثالي للأنشطة اليومية مع تصميم يسمح بحرية الحركة",
-      availableSizes: ["M", "L", "XL"],
-      availableColors: ["كما في الصورة", "رمادي", "بنفسجي", "أصفر"]
+    "3": {
+      "name": "مودال 3",
+      "price": 3300,
+      "image": "https://i.ibb.co/Wvd03mPd/modal10-jpg.webp",
+      "description": "مثالي للأنشطة اليومية مع تصميم يسمح بحرية الحركة"
     },
-    4: { 
-      name: "مودال 4", 
-      price: 3300, 
-      image: "images/modal4.jpg", 
-      description: "تصميم فاخر مع تفاصيل مميزة للمناسبات الخاصة",
-      availableSizes: ["S", "L", "XL"],
-      availableColors: ["كما في الصورة", "أسود", "أبيض", "ذهبي"]
+    "4": {
+      "name": "مودال 4",
+      "price": 3300,
+      "image": "https://i.ibb.co/cSTd8VdY/modal9-jpg.webp",
+      "description": "تصميم فاخر مع تفاصيل مميزة للمناسبات الخاصة"
     },
-    5: { 
-      name: "مودال 5", 
-      price: 3300, 
-      image: "images/modal5.jpg", 
-      description: "تصميم عملي مع خامات سهلة التنظيف والارتداء",
-      availableSizes: ["S", "M", "XL"],
-      availableColors: ["كما في الصورة", "أزرق", "أخضر", "برتقالي"]
+    "5": {
+      "name": "مودال 5",
+      "price": 3300,
+      "image": "https://i.ibb.co/Nn6SqLC5/modal12-jpg.webp",
+      "description": "تصميم عملي مع خامات سهلة التنظيف والارتداء"
     },
-    6: { 
-      name: "مودال 6", 
-      price: 3300, 
-      image: "images/modal6.jpg", 
-      description: "تصميم راق مع خامات سهلة التنظيف والارتداء",
-      availableSizes: ["M", "L"],
-      availableColors: ["كما في الصورة", "زهري", "بنفسجي", "أحمر"]
+    "6": {
+      "name": "مودال 6",
+      "price": 3300,
+      "image": "https://i.ibb.co/TMRp0qps/modal13-jpg.webp",
+      "description": "تصميم راق مع خامات سهلة التنظيف والارتداء"
     },
-    7: { 
-      name: "مودال 7", 
-      price: 3300, 
-      image: "images/modal7.jpg", 
-      description: "تصميم جذاب مع خامات سهلة التنظيف والارتداء",
-      availableSizes: ["S", "M", "L", "XL"],
-      availableColors: ["كما في الصورة", "أسود", "رمادي", "أبيض"]
+    "7": {
+      "name": "مودال 7",
+      "price": 3300,
+      "image": "https://i.ibb.co/0RkzM3Zj/modal16-jpg.webp",
+      "description": "تصميم جذاب مع خامات سهلة التنظيف والارتداء"
     },
-    8: { 
-      name: "مودال 8", 
-      price: 3300, 
-      image: "images/modal8.jpg", 
-      description: "تصميم فاخر مع خامات سهلة التنظيف والارتداء",
-      availableSizes: ["L", "XL"],
-      availableColors: ["كما في الصورة", "أزرق", "أخضر", "ذهبي"]
+    "8": {
+      "name": "مودال 8",
+      "price": 3300,
+      "image": "https://i.ibb.co/pv0D9S8k/modal15-jpg.webp",
+      "description": "تصميم فاخر مع خامات سهلة التنظيف والارتداء"
     },
-    9: { 
-      name: "مودال 9", 
-      price: 3300, 
-      image: "images/modal9.jpg", 
-      description: "تصميم ملكي بامتياز",
-      availableSizes: ["S", "XL"],
-      availableColors: ["كما في الصورة", "أحمر", "ذهبي", "أسود"]
+    "9": {
+      "name": "مودال 9",
+      "price": 3300,
+      "image": "https://i.ibb.co/8DpptXs6/modal14-jpg.webp",
+      "description": "تصميم ملكي بامتياز"
     },
-    10: { 
-      name: "مودال 10", 
-      price: 3300, 
-      image: "images/modal10.jpg", 
-      description: "تصميم تركي فاخر",
-      availableSizes: ["M", "L", "XL"],
-      availableColors: ["كما في الصورة", "أبيض", "زهري", "بنفسجي"]
+    "10": {
+      "name": "مودال 10",
+      "price": 3300,
+      "image": "https://i.ibb.co/tgXzDMs/modle6.jpg",
+      "description": "تصميم تركي فاخر"
     },
-    11: { 
-      name: "مودال 11", 
-      price: 3300, 
-      image: "images/modal11.jpg", 
-      description: "تصميم ملكي بامتياز",
+    "11": {
+      "name": "مودال 11",
+      "price": 3300,
+      "image": "https://i.ibb.co/4Rx8PYjP/modal5.jpg",
+      "description": "تصميم ملكي بامتياز"
+    },
+    "12": {
+      "name": "مودال 12",
+      "price": 3300,
+      "image": "https://raw.githubusercontent.com/Ahcene43/Inas/main/images/1760656891628-modal2.jpg",
+      "description": "وصف المنتج الجديد"
+    },
+    "13": {
+      "name": "مودال 13",
+      "price": 3300,
+      "image": "https://raw.githubusercontent.com/Ahcene43/Inas/main/images/1760656965515-Screenshot_20251006-134027_Facebook.jpg",
+      "description": "وصف المنتج الجديد"
+    },
+    "14": {
+      "name": "مودال 14",
+      "price": 5200,
+      "image": "https://raw.githubusercontent.com/Ahcene43/Inas/main/images/1760731352265-modal6.jpg",
+      "description": "مودال شتوي فاخر",
       availableSizes: ["S", "M", "L"],
       availableColors: ["كما في الصورة", "أزرق", "رمادي", "أخضر"]
     }
