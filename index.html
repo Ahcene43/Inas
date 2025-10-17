@@ -1400,20 +1400,60 @@
     let pieceCount = 0;
     const ADMIN_PASSWORD = "12343210"; // كلمة المرور الافتراضية
 
-    function updateStoreDisplay() {
-      document.title = `🛒 ${STORE_CONFIG.STORE_INFO.name} 🎀${STORE_CONFIG.STORE_INFO.tagline}🎀`;
-      document.getElementById('modalStoreName').textContent = STORE_CONFIG.STORE_INFO.name;
-      document.getElementById('storeNameHeader').textContent = STORE_CONFIG.STORE_INFO.name;
-      
-      const infoBar = document.getElementById('infoBarContent');
-      if (infoBar) {
-        const phones = STORE_CONFIG.STORE_INFO.phoneNumbers || ["0671466489", "0551102155"];
-        infoBar.innerHTML = phones.map(phone => 
-          `<i class="fas fa-phone-alt"></i> للاستفسار أطلب ${phone} `
-        ).join('').repeat(3);
-      }
-      updatePrice();
+    async function updateStoreDisplay() {
+  try {
+    // انتظار تحميل الإعدادات أولاً
+    const success = await loadRemoteConfig();
+    
+    if (success) {
+      console.log('✅ تم تحديث الإعدادات من الخادم');
+    } else {
+      console.log('⚠️ استخدام الإعدادات المحلية');
     }
+    
+    // الآن تحديث الواجهة بعد اكتمال تحميل البيانات
+    updateUIWithConfig();
+    
+  } catch (error) {
+    console.error('❌ خطأ في تحديث الواجهة:', error);
+    // استخدام الإعدادات الحالية رغم الخطأ
+    updateUIWithConfig();
+  }
+}
+
+// دالة منفصلة لتحديث الواجهة
+function updateUIWithConfig() {
+  // تحديث title والصفحة
+  document.title = `🛒 ${STORE_CONFIG.STORE_INFO.name} 🎀${STORE_CONFIG.STORE_INFO.tagline}🎀`;
+  
+  // تحديث العناصر في الصفحة
+  const modalStoreName = document.getElementById('modalStoreName');
+  const storeNameHeader = document.getElementById('storeNameHeader');
+  
+  if (modalStoreName) modalStoreName.textContent = STORE_CONFIG.STORE_INFO.name;
+  if (storeNameHeader) storeNameHeader.textContent = STORE_CONFIG.STORE_INFO.name;
+  
+  // تحديث شريط المعلومات
+  const infoBar = document.getElementById('infoBarContent');
+  if (infoBar) {
+    const phones = STORE_CONFIG.STORE_INFO.phoneNumbers || ["0671466489", "0551102155"];
+    infoBar.innerHTML = phones.map(phone => 
+      `<i class="fas fa-phone-alt"></i> للاستفسار أطلب ${phone} `
+    ).join('').repeat(3);
+  }
+  
+  // إعادة تهيئة السلايدر مع البيانات الجديدة
+  if (typeof initSlider === 'function') {
+    initSlider();
+  }
+  
+  // تحديث الأسعار
+  if (typeof updatePrice === 'function') {
+    updatePrice();
+  }
+  
+  console.log('✅ تم تحديث الواجهة بالإعدادات الجديدة');
+}
 
     function getSize(age) {
       return STORE_CONFIG.AGE_SIZES[age] || "غير متوفر";
