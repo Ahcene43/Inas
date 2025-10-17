@@ -104,6 +104,26 @@
         "أسود",
         "رمادي"
       ]
+    },
+    "15": {
+      "name": "مودال 15",
+      "price": 3300,
+      "image": "https://raw.githubusercontent.com/Ahcene43/Inas/main/images/1760737151657-IMG_20251013_093901_(360_x_640_pixel).jpg",
+      "description": "مودال عملي يدوم طويلا",
+      "availableSizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "S1"
+      ],
+      "availableColors": [
+        "كما في الصورة",
+        "أبيض",
+        "أسود",
+        "رمادي"
+      ]
     }
   },
   "DELIVERY_PRICES": {
