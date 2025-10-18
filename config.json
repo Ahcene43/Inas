@@ -127,30 +127,6 @@
         "أسود",
         "رمادي"
       ]
-    },
-    "16": {
-      "name": "مودال 16",
-      "price": 5000,
-      "image": "https://raw.githubusercontent.com/Ahcene43/Inas/main/images/1760778145966-Hft.jpg",
-      "description": "باب ADM نوعية رفيعة",
-      "availableSizes": [
-        "M"
-      ],
-      "availableColors": [
-        "كما في الصورة"
-      ]
-    },
-    "17": {
-      "name": "مودال 17",
-      "price": 700000,
-      "image": "https://raw.githubusercontent.com/Ahcene43/Inas/main/images/1760778576225-20251018_100835.jpg",
-      "description": "إطار سوناطراك",
-      "availableSizes": [
-        "M"
-      ],
-      "availableColors": [
-        "كما في الصورة"
-      ]
     }
   },
   "DELIVERY_PRICES": {
