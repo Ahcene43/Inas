@@ -127,6 +127,18 @@
         "أسود",
         "رمادي"
       ]
+    },
+    "16": {
+      "name": "مودال 16",
+      "price": 5000,
+      "image": "https://raw.githubusercontent.com/Ahcene43/Inas/main/images/1760778145966-Hft.jpg",
+      "description": "باب ADM نوعية رفيعة",
+      "availableSizes": [
+        "M"
+      ],
+      "availableColors": [
+        "كما في الصورة"
+      ]
     }
   },
   "DELIVERY_PRICES": {
